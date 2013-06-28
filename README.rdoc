@@ -6,12 +6,12 @@ To reproduce:
 * rails server
 * http://localhost:3000/posts
 * Create a new post with a User ID of 5
-** Note this is prohibited by cancan
+  *  Note this is prohibited by cancan
 * Create a new post with a nil User ID
-** Note this is allowed by cancan (you aren't signed in, your user_id is nil)
+  * Note this is allowed by cancan (you aren't signed in, your user_id is nil)
 * Edit your post, and set the User ID to 5
-** Note this succeeds
+  * Note this succeeds
 * Edit app/controllers/posts_controller.rb on line 6, uncomment the before_filter line and save
 * Create a new post with a nil User ID
-** Edit the post and set the User ID to 5
-** Note the problem is now fixed, guest users cannot create or update posts that don't belong to them.
+  * Edit the post and set the User ID to 5
+  * Note the problem is now fixed, guest users cannot create or update posts that don't belong to them.
