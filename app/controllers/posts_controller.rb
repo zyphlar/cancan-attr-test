@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   #####
   ## Comment this line to allow guest users to edit and supply random user_ids
-  before_filter :authorize_update_for_real, :only => :update
+  #before_filter :authorize_update_for_real, :only => :update
   #####
 
   # GET /posts
